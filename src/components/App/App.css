@@ -3,57 +3,120 @@ body {
   width: 100%;
   background-color: #1e1e2f;
   color: #e0e0e0;
-  margin: 0; /* Убираем отступы по умолчанию */
+  margin: 0;
 }
 
 .container {
-  margin-top: 100px;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Уменьшаем отступ между элементами */
-  align-items: center;
-  justify-content: flex-start; /* Убираем растягивание по высоте */
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
 .title {
-  height: 30px;
+  padding-top: 50px;
+  text-align: center;
+  height: 50px;
   font-family: cursive;
+  font-size: 50px;
 }
 
 .todos {
-  padding: 0; /* Убираем отступы списка */
-  max-height: 500px; /* Максимальная высота для списка задач */
-  overflow-y: auto; /* Добавляем прокрутку, если задач много */
+  margin-left: 300px;
+  margin-right: 300px;
+  max-width: 600px; 
+  max-height: 500px;
+  overflow-x: auto;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #7c7c7c;
+  transition: color 0.5s ease, text-decoration 0.5s ease;
 }
 
 .todos::-webkit-scrollbar {
-  
-    width: 8px; /* Ширина полосы прокрутки */
-  }
-  
-  .todos::-webkit-scrollbar-track {
-    background: #1e1e2f; /* Цвет фона полосы прокрутки */
-    border-radius: 4px; /* Скругленные углы */
-  }
-  
-  .todos::-webkit-scrollbar-thumb {
-    background-color: #dfdfdf; /* Цвет прокрутки */
-    border-radius: 4px; /* Скругление самого ползунка */
-    border: 2px solid #1e1e2f; /* Пробел вокруг ползунка */
-  }
-  
-  /* Стили при наведении на полосу прокрутки */
-  .todos::-webkit-scrollbar-thumb:hover {
-    background-color: #93759b; /* Более светлый цвет при наведении */
-  }
-
-.todo {
-  display: flex;
-  padding: 5px;
-  background: #2e2e3e;
-  border-radius: 5px;
-  margin: 5px 0; /* Отступы между задачами */
-  margin-right: 15px;
+  width: 8px;
 }
 
+.todos::-webkit-scrollbar-track {
+  background: #1e1e2f;
+  border-radius: 4px;
+}
+
+.todos::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border-radius: 4px;
+  border: 2px solid #1e1e2f;
+}
+
+.todos::-webkit-scrollbar-thumb:hover {
+  background-color: #93759b;
+}
+
+.todo {
+    overflow-wrap: break-word;
+    word-break: break-word; /* Обеспечивает перенос длинных слов */
+    white-space: normal;    /* Позволяет перенос на новую строку */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #2e2e3e;
+  border-radius: 5px;
+  margin: 10px 0;
+  margin-right: 15px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  font-family: cursive;
+}
+
+.todo:hover {
+  transition: 0.2s ease;
+  scale: 1.01px;
+  box-shadow: 0px 0px 8px 3px rgba(228, 228, 228, 0.2);
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+}
+
+.todo:hover .delete {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.info {
+  font-family: cursive;
+  padding-left: calc(80% - 600px);
+  padding-right: calc(80% - 600px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resetBtn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.resetBtn {
+  font-family: cursive;
+  padding: 10px 20px;
+  background-color: #4f7250;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resetBtn:hover {
+  background-color: #72a575;
+}

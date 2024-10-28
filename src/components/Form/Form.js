@@ -11,7 +11,7 @@ export const Form = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <input
         placeholder="Название задачи"
         className="input"
