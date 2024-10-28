@@ -22,7 +22,7 @@ body {
 .todos {
   margin-left: 300px;
   margin-right: 300px;
-  max-width: 600px; 
+  max-width: 600px;
   max-height: 500px;
   overflow-x: auto;
   cursor: pointer;
@@ -55,9 +55,9 @@ body {
 }
 
 .todo {
-    overflow-wrap: break-word;
-    word-break: break-word; /* Обеспечивает перенос длинных слов */
-    white-space: normal;    /* Позволяет перенос на новую строку */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
   display: flex;
   justify-content: space-between;
   padding: 10px;
