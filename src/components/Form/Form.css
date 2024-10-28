@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #2e2e3e;
+  color: #e0e0e0;
+}
+
+/* Стили для состояния фокуса */
+.input:focus {
+  border-color: #f8f6fc; /* Цвет рамки при фокусе */
+  background-color: #8d8d8d; /* Фон при фокусе */
+  box-shadow: 0 4px 8px rgba(250, 247, 255, 0.2); /* Легкая тень */
+}
+
+/* Стили для плейсхолдера */
+.input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
